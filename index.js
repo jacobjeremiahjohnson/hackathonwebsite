@@ -3,5 +3,5 @@ function upload() {
 }
 
 function play() {
-    location.href = "play.html"
+    location.href = "play.html";
 }
