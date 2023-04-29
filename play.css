@@ -1,0 +1,21 @@
+#map {
+    height: 80%;
+    width: 30%;
+}
+  
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.float-child1 {
+    float: left;
+    width: 70%;
+}
+
+.float-child2 {
+    float: left;
+    width: 30%;
+}
