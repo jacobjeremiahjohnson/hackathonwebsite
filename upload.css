@@ -41,7 +41,8 @@ body {
 }
 
 #input {
-    padding-top: 45%;
+    margin-top: 45%;
+    background-color: lightblue;
 }
 
 .descriptionfloat {
@@ -53,12 +54,8 @@ body {
 
 textarea {
     float: left;
-    margin-top: 30%;
+    margin-top: 0%;
     resize: none;
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: hidden;
     background: none;
     text-align: left;
 }
@@ -66,6 +63,11 @@ textarea {
 #upload-photo{
     margin: auto;
     width: 20%;
+    margin-left: 40%;
+}
+
+#auto-location{
+    margin-top: 10%;
 }
 
 #image{
