@@ -19,7 +19,7 @@ var photos;
 
 getPhotos();
 
-function checkIn(j){
+function checkIn(j){ // Check for repeats
     for (let i = 0; i < 3; i++){
         if(ids[i] == j){
             return true;
@@ -28,7 +28,7 @@ function checkIn(j){
     return false;
 }
 
-function populateIds() {
+function populateIds() { // Populate id array
     for (let i = 0; i < 3; i++){
         while(true){
             let j = Math.floor(Math.random() * photos)
@@ -42,7 +42,7 @@ function populateIds() {
     console.log(ids)
 }
 
-function getPhotos() {
+function getPhotos() { // Get total photo count from webserver
     var Http = new XMLHttpRequest();
     var url='http://localhost:8080/'
 
@@ -56,7 +56,7 @@ function getPhotos() {
 }
 
 
-function getInfo() {
+function getInfo() { // Get image and metadata from webserver
     let id = ids[roundCount-1].toString()
     var Http = new XMLHttpRequest();
     var url='http://localhost:8080/GET/'+id+'/json';
@@ -87,7 +87,7 @@ function getInfo() {
 
 
 
-document.getElementById("next-round-button").addEventListener("click", function() {
+document.getElementById("next-round-button").addEventListener("click", function() { // Reset attributes and sum points
     document.getElementById("round-count").innerHTML = "Round " + roundCount + "/3"
     document.getElementById("next-round-button").style.visibility = "hidden"
     document.getElementById("submit-button").style.visibility = "visible"

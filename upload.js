@@ -8,7 +8,7 @@ var longitude = document.getElementById("longitude")
 let imagesArray = []
 var file;
 
-document.getElementById("auto-location").onclick = function() {
+document.getElementById("auto-location").onclick = function() { // Fill latitude and longitude textareas automatically
   
   navigator.geolocation.getCurrentPosition(success, error);
 
@@ -25,7 +25,7 @@ document.getElementById("auto-location").onclick = function() {
 
 }
 
-input.onchange = () => {
+input.onchange = () => { // Handle file upload
     file = fileInput.files[0];
   console.log(file);
   image.src = URL.createObjectURL(file);
@@ -36,8 +36,9 @@ input.onchange = () => {
   
 }
 
-document.getElementById("upload-photo").onclick = function() {
+document.getElementById("upload-photo").onclick = function() { // Make POST request to Java webserver
 
+  // Text POST request
   if (title.value != null && description.value != null && latitude.value != null && longitude.value != null){
   var nhr = new XMLHttpRequest();
   nhr.open('POST', 'http://localhost:8080/POST/', true);
@@ -54,7 +55,7 @@ document.getElementById("upload-photo").onclick = function() {
   var data = file;
   nhr.send(data);
   
-  
+  // File POST request
     var xhr = new XMLHttpRequest();
 
   xhr.open('POST', 'http://localhost:8080/POST/', true);
