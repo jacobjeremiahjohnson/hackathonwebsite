@@ -2,14 +2,26 @@
 <html>
     <head>
         <title>Upload</title>
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/upload.css">
     </head>
     <body>
-        <div>
-            <input type="file" value="Upload an image">
-            <output></output>
-        </div>
-
+        <div class="float-container">
+            <div class="logo-float">
+                <a href="index.html"><img id="logo" src="DELA-WHERE.png"></a>
+                </div>
+            </div>
+            <div class="title-float" id = "title">Photo Upload</div>
+            <div id="output"> 
+                <div id="input-wrapper" class="inputfloat">
+                    <input type="file" id="input" accept="image/*">
+                    <img src="" id="image">
+                </div>
+                <div id="description-wrapper" class="descriptionfloat">
+                    <textarea id="text-input" cols="67" rows="10">Image Description Here</textarea>
+                </div>
+            </div>
+            <div id="upload-wrapper"></div>
+            <button id="upload-photo">Upload</button>
         <script src="upload.js"></script>
     </body>
 </html>

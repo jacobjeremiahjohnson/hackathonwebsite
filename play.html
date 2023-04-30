@@ -11,10 +11,13 @@
   <body>
     <div class="float-container">
         <div class="logo-float">
-            <img id="logo" src="DELA-WHERE.png">
+            <a href="index.html"><img id="logo" src="DELA-WHERE.png"></a>
             <div id="description"> 
+                <div id="round-count">
+                    Round 1/3
+                </div>
                 <div id="points">
-                    Points: 
+                    Points: 0
                 </div>
                 <div id="description-body">
 
@@ -25,7 +28,11 @@
     </div>
     <div class="float-child1">
         <img id="image">
-        <button id="submit-button">Check</button>
+        <div class="button-container">
+            <button id="submit-button">Check</button>
+            <button id="next-round-button">Next Round -></button>
+        </div>
+        <div id="final-score"></div>
     </div>
     <div id="map" class="float-child2"></div>
 

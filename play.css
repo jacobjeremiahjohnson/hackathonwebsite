@@ -49,16 +49,35 @@ body {
 
 #image {
     padding-top: 2%;
-    width: 90%;
+    width: 98%;
     height: auto;
     max-height: 80%;
 }
 
-#submit-button {
+.button-container {
     height: 10%;
+}
+
+#submit-button {
+    float: left;
+    height: 100%;
     width: 20%;
+}
+
+#next-round-button {
+    float: left;
+    width: 20%;
+    height: 100%;
+    visibility: visible;
+    margin-left: 58%;
 }
 
 #description {
     padding-left: 8%;
+}
+
+#final-score {
+    visibility: hidden;
+    font-size: 30px;
+    text-align: center;
 }
